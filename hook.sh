@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 sphinx-apidoc $@
 
 tracked=$(git diff --name-only *.rst)
