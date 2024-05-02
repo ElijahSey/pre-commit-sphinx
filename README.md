@@ -1,2 +1,2 @@
-# pre-commit-sphinx
-A pre-commit hook to update the sphinx doc
+# sphinx-pre-commit
+A pre-commit hook for keeping the sphinx doc up-to-date
