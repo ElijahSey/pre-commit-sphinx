@@ -2,6 +2,7 @@
   name: Update Sphinx Documentation
   description: Fails, if documentation is not complete and updates the sphinx doc.
   entry: hook.sh
+  args: [--force, --no-toc, -o docs, src]
   always_run: true
   exclude: .*
   pass_filenames: false
