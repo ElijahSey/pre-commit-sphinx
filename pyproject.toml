@@ -1,0 +1,11 @@
+[project]
+name = "sphinx_pre_commit"
+version = "0.13.0"
+
+[options.entry_points]
+console_scripts =
+    sphinx_pre_commit = sphinx_pre_commit:main
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
