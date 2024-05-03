@@ -1,12 +1,12 @@
 #!/usr/bin/env sh
 
 prediff=$(git diff *.rst)
-prefiles=$(git ls-files --other --exclude-standard)
+prefiles=$(git status -s)
 
 sphinx-apidoc $@
 
 postdiff=$(git diff *.rst)
-postfiles=$(git ls-files --other --exclude-standard)
+postfiles=$(git status -s)
 
 if [ "$prediff" = "$postdiff" ]; then
     if [ "$prefiles" = "$postfiles" ]; then
