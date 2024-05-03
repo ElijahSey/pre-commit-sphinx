@@ -1,13 +1,10 @@
 #!/usr/bin/env sh
+prediff=$(git diff *.rst)
 sphinx-apidoc $@
+postdiff=$(git diff *.rst)
 
-tracked=$(git diff --name-only *.rst)
-untracked=$(git ls-files --other --exclude-standard)
-
-if [ -z "$tracked" ]; then
-    if [ -z "$untracked" ]; then
-        exit 0
-    fi
+if [ "$prediff" = "$postdiff" ]; then
+    exit 0
 fi
 
 exit 1
