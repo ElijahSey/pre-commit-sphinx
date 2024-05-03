@@ -9,7 +9,7 @@ postdiff=$(git diff *.rst)
 postfiles=$(git ls-files --other --exclude-standard)
 
 if [ "$prediff" = "$postdiff" ]; then
-    if [ "$prefiles" = "$postfiles"]; then
+    if [ "$prefiles" = "$postfiles" ]; then
         exit 0
     fi
 fi
