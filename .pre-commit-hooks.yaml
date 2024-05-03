@@ -1,19 +1,10 @@
 - id: sphinx-apidoc
   name: Update Sphinx Documentation
   description: Fails, if documentation is not complete and updates the sphinx doc.
-  entry: sphinx_apidoc.sh
+  entry: sphinx_apidoc
   args: [--force, --no-toc, -o docs, src]
   always_run: true
   files: '^$'
   pass_filenames: false
-  language: script
-
-- id: activate-venv
-  name: Activate venv
-  description: Activate the virtual environment
-  entry: run_command.sh
-  args: [.venv\Scripts\activate]
-  always_run: true
-  files: '^$'
-  pass_filenames: false
-  language: script
+  language: python
+  additional_dependencies: [sphinx]
