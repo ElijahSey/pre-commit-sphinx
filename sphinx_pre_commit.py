@@ -19,6 +19,7 @@ def main():
     if prestatus == poststatus:
         sys.exit(0)
     else:
+        print("Sphinx docs were not complete.", file=sys.stderr)
         sys.exit(1)
 
 
